@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int kode = 7;
+    int tebak;
+
+    for (int i = 1; i <= 3; i++) {
+        cout << "percobaan " << i << "/3 - Tebak : ";
+        cin >> tebak;
+
+        if (tebak == kode) {
+            cout << "Menang!" << endl;
+            return 0;
+        } else {
+            cout << "Salah!" << endl;
+        }
+    }
+
+    cout << "Kalah! Angka = 7" << endl;
+    return 0;
+}
+

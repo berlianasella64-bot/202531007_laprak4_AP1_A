@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Masukkan jumlah hari: ";
+    cin >> n;
+
+    int uang, total = 0;
+    for (int i = 1; i <= n; i++) {
+        cout << "Uang saku hari ke-" << i << ": ";
+        cin >> uang;
+        total += uang;
+    }
+
+    cout << "Total uang saku: " << total << endl;
+    return 0;
+}
+

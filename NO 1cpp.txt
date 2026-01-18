@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int pilihan;
+    while (true) {
+        cout << "=== FIBONACCI GENERATOR ===" << endl;
+        cout << "Menu:" << endl;
+        cout << "1. Tampilkan Fibonacci sebanyak n suku" << endl;
+        cout << "2. Tampilkan Fibonacci sampai nilai maksimum m" << endl;
+        cout << "3. Exit" << endl;
+        cout << "Pilih menu: ";
+        cin >> pilihan;
+
+        if (pilihan == 3) {
+            break;
+        }
+
+        if (pilihan == 1) {
+            int n;
+            cout << "Masukkan n: ";
+            cin >> n;
+
+            if (n <= 0) {
+                cout << "Input tidak valid!" << endl << endl;
+                continue;
+            }
+
+            int a = 0, b = 1;
+            cout << "Hasil (" << n << " suku): "<<endl;
+            for (int i = 1; i <= n; i++) {
+                cout << a << " ";
+                int c = a + b;
+                a = b;
+                b = c;
+            }
+            cout << endl << endl;
+        }
+        else if (pilihan == 2) {
+            int m;
+            cout << "Masukkan m: ";
+            cin >> m;
+
+            if (m < 0) {
+                cout << "Input tidak valid!" << endl << endl;
+                continue;
+            }
+
+            int a = 0, b = 1;
+            cout << "Hasil (<= " << m << "): " <<endl;
+            while (a <= m) {
+                cout << a << " ";
+                int c = a + b;
+                a = b;
+                b = c;
+            }
+            cout << endl << endl;
+        }
+        else {
+            cout << "Input tidak valid!" << endl << endl;
+        }
+    }
+    return 0;
+}
+

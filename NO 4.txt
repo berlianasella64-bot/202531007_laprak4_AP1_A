@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int harga;
+    int jumlah = 0;
+    int total = 0;
+
+    cout << "Belanja Minimarket\n\n";
+    cout << "Masukkan harga barang (0 untuk selesai):\n";
+
+    while (true) {
+        cout << "Harga: ";
+        cin >> harga;
+
+        if (harga == 0)
+            break;
+
+        total += harga;
+        jumlah++;
+    }
+
+    int diskon = 0;
+    if (total >= 100000) {
+        diskon = total * 10 / 100; // 10%
+    }
+
+    cout << "\nJumlah barang: " << jumlah << endl;
+    cout << "Total sebelum diskon: " << total << endl;
+    cout << "Diskon: " << diskon << endl;
+    cout << "\nTotal bayar: " << total - diskon << endl;
+
+    return 0;
+}
+
